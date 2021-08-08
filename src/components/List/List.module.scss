@@ -1,4 +1,10 @@
+@import "./../../Base.scss";
+
 .List {
-  display: flex;
-  flex-flow: column wrap;
+  background-color: $foreground-color;
+
+  .emptyList {
+    text-align: center;
+    padding: 10px;
+  }
 }

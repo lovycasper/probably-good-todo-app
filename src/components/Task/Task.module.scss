@@ -1,4 +1,21 @@
+@import "./../../Base.scss";
+
 .Task {
-  display: inline-flex;
+  background-color: $background-color;
+  padding: 10px 20px;
+  border-radius: $border-radius;
+  text-align: left;
+  margin: 10px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
   align-items: center;
+
+  input[type=checkbox] {
+    cursor: pointer;
+  }
+
+  button {
+    cursor: pointer;
+  }
 }

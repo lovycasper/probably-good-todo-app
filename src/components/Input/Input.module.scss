@@ -1,12 +1,16 @@
+@import "./../../Base.scss";
+
 .Input {
   display: flex;
   justify-content: center;
-  padding: 10px;
-  background-color: blue;
 
   input {
+    width: 100%;
     border: 0;
-    // swap font-size into App.scss globally
-    font-size: 30px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    outline: none;
+    border-radius: $border-radius;
   }
 }

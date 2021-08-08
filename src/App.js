@@ -1,5 +1,5 @@
 import './App.scss';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header/Header';
 import Input from './components/Input/Input';
 import List from './components/List/List';
@@ -7,14 +7,6 @@ import List from './components/List/List';
 function App() {
   const [tasks, setTasks] = useState([]);
   const [inputValue, setInputValue] = useState('');
-
-  useEffect(() => {
-    console.log('Current tasks state: ', tasks);
-  }, [tasks]);
-
-  useEffect(() => {
-    console.log('Current inputValue state: ', inputValue);
-  }, [inputValue]);
 
   const handleAddTask = () => {
     let newTask = {
@@ -45,8 +37,10 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Input setInputValue={setInputValue} inputValue={inputValue} handleAddTask={handleAddTask} />
-      <List tasks={tasks} deleteTask={deleteTask} setCompletedTask={setCompletedTask} />
+      <div className="tasksWrapper">
+        <Input setInputValue={setInputValue} inputValue={inputValue} handleAddTask={handleAddTask} />
+        <List tasks={tasks} deleteTask={deleteTask} setCompletedTask={setCompletedTask} />
+      </div>
     </div>
   );
 }

@@ -6,10 +6,10 @@ function Header() {
     <div className={style.Header}>
       <h1>ToDooOoooOOOoo!</h1>
       
-      <div className={style.HeaderMenu}>
+      {/* <div className={style.HeaderMenu}>
         <button>Login</button>
         <button>Sign Up</button>
-      </div>
+      </div> */}
     </div>
   );
 }
