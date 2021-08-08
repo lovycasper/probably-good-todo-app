@@ -1,10 +1,10 @@
 import React from "react";
-import style from "./Input.module.css";
+import style from "./Input.module.scss";
 
 function Input( { addTask } ) {
   
   return (
-    <div>
+    <div className={style.Input}>
       <input
         type="text"
         required

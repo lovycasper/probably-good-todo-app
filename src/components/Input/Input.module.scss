@@ -1,0 +1,12 @@
+.Input {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: blue;
+
+  input {
+    border: 0;
+    // swap font-size into App.scss globally
+    font-size: 30px;
+  }
+}

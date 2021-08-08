@@ -1,9 +1,9 @@
 import React from "react";
-import style from "./Task.module.css";
+import style from "./Task.module.scss";
 
 function Task({ id, name, isDone, deleteTask, setCompletedTask }) {
   return (
-    <div className={style.Item}>
+    <div className={style.Task}>
       <input
         type="checkbox"
         onChange={(e) => setCompletedTask(e.target.checked, id)}

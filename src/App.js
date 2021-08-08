@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header/Header';
 import Input from './components/Input/Input';
@@ -20,7 +20,7 @@ function App() {
       };    
       let tempTasks = [...tasks, newTask];  
       setTasks(tempTasks);
-      return true; // returns true to <Input /> and it resets current input value
+      return true; // returns true to <Input /> then <Input /> resets current input value
     }
   };
 

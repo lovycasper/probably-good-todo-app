@@ -1,10 +1,15 @@
 import React from 'react';
-import style from './Header.module.css';
+import style from './Header.module.scss';
 
 function Header() {
   return (
-    <div className={style.header}>
-      <h1>ToDooOoooOOOoo! (WIP)</h1>
+    <div className={style.Header}>
+      <h1>ToDooOoooOOOoo!</h1>
+      
+      <div className={style.HeaderMenu}>
+        <button>Login</button>
+        <button>Sign Up</button>
+      </div>
     </div>
   );
 }

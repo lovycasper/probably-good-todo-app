@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./List.module.css";
+import style from "./List.module.scss";
 
 import Task from "./../Task/Task";
 
