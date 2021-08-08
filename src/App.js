@@ -1,5 +1,5 @@
 import './App.scss';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './components/Header/Header';
 import Input from './components/Input/Input';
 import List from './components/List/List';
@@ -7,6 +7,9 @@ import List from './components/List/List';
 function App() {
   const [tasks, setTasks] = useState([]);
   const [inputValue, setInputValue] = useState('');
+
+
+  useEffect(() => console.log(tasks), [tasks]);
 
   const handleAddTask = () => {
     let newTask = {

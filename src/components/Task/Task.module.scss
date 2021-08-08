@@ -1,5 +1,13 @@
 @import "./../../Base.scss";
 
+$background: #ffffff;
+$text: #414856;
+$check: #4f29f0;
+$disabled: #c3c8de;
+$width: 100px;
+$height: 140px;
+$border-radius: 10px;
+
 .Task {
   background-color: $background-color;
   padding: 10px 20px;
@@ -11,11 +19,34 @@
   justify-content: space-between;
   align-items: center;
 
-  input[type=checkbox] {
-    cursor: pointer;
+  label {
+  }
+
+  input[type="checkbox"] {
   }
 
   button {
+    width: 26px;
+    height: 26px;
+    border: 0;
+    border-radius: 5px;
+    background-color: $accent-color;
+    color: white;
+    font-size: 16px;
     cursor: pointer;
+    transition: 0.3s;
+
+    span {
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+    &:hover {
+      background-color: $alert-color;
+
+      span {
+        opacity: 1;
+      }
+    }
   }
 }

@@ -1,8 +1,7 @@
 import React from "react";
 import style from "./Input.module.scss";
 
-function Input( { setInputValue, inputValue, handleAddTask } ) {
-  
+function Input({ setInputValue, inputValue, handleAddTask }) {
   return (
     <div className={style.Input}>
       <input
@@ -11,7 +10,7 @@ function Input( { setInputValue, inputValue, handleAddTask } ) {
         placeholder="What you need to do?"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
-        onKeyPress={(e) => (e.key === 'Enter') ? handleAddTask() : null }
+        onKeyPress={(e) => (e.key === "Enter" ? handleAddTask() : null)}
       />
     </div>
   );

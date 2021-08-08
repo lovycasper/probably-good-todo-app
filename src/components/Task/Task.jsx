@@ -6,11 +6,14 @@ function Task({ id, name, isDone, deleteTask, setCompletedTask }) {
     <div className={style.Task}>
       <input
         type="checkbox"
+        id="setAsCompleted"
         onChange={(e) => setCompletedTask(e.target.checked, id)}
         checked={isDone}
       />
-      <h2>{name}</h2>
-      <button onClick={() => deleteTask(id)}>X</button>
+      <label htmlFor="setAsCompleted">{name}</label>
+      <button onClick={() => deleteTask(id)}>
+        <span>X</span>
+      </button>
     </div>
   );
 }
