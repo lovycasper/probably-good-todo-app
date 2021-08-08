@@ -6,23 +6,25 @@ import List from './components/List/List';
 
 function App() {
   const [tasks, setTasks] = useState([]);
+  const [inputValue, setInputValue] = useState('');
 
   useEffect(() => {
-    console.log('Current state: ', tasks);
+    console.log('Current tasks state: ', tasks);
   }, [tasks]);
 
-  const addTask = (inputKey, inputValue) => {
-    if (inputKey === 'Enter') {
-      const newTask = {
-        id: Date.now(),
-        name: inputValue,
-        isDone: false
-      };    
-      let tempTasks = [...tasks, newTask];  
-      setTasks(tempTasks);
-      return true; // returns true to <Input /> then <Input /> resets current input value
+  useEffect(() => {
+    console.log('Current inputValue state: ', inputValue);
+  }, [inputValue]);
+
+  const handleAddTask = () => {
+    let newTask = {
+      id: Date.now(),
+      name: inputValue,
+      isDone: false
     }
-  };
+    let oldArray = [...tasks, newTask];
+    setTasks(oldArray);
+  }
 
   const deleteTask = (id) => {
     let newTasks = tasks.filter((task) => task.id !== id);
@@ -43,7 +45,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Input addTask={addTask} />
+      <Input setInputValue={setInputValue} inputValue={inputValue} handleAddTask={handleAddTask} />
       <List tasks={tasks} deleteTask={deleteTask} setCompletedTask={setCompletedTask} />
     </div>
   );
