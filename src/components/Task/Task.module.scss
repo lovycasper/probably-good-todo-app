@@ -1,13 +1,5 @@
 @import "./../../Base.scss";
 
-$background: #ffffff;
-$text: #414856;
-$check: #4f29f0;
-$disabled: #c3c8de;
-$width: 100px;
-$height: 140px;
-$border-radius: 10px;
-
 .Task {
   background-color: $background-color;
   padding: 10px 20px;
@@ -19,8 +11,6 @@ $border-radius: 10px;
   justify-content: space-between;
   align-items: center;
 
-  label {
-  }
 
   input[type="checkbox"] {
   }

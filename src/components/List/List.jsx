@@ -10,9 +10,7 @@ function List({ tasks, deleteTask, setCompletedTask }) {
         tasks.map((task) => (
           <React.Fragment key={task.id}>
             <Task
-              id={task.id}
-              name={task.name}
-              isDone={task.isDone}
+              task={task}
               deleteTask={deleteTask}
               setCompletedTask={setCompletedTask}
             />

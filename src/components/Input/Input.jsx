@@ -7,7 +7,7 @@ function Input({ setInputValue, inputValue, handleAddTask }) {
       <input
         type="text"
         required
-        placeholder="What you need to do?"
+        placeholder="Give a short title for your task"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
         onKeyPress={(e) => (e.key === "Enter" ? handleAddTask() : null)}
